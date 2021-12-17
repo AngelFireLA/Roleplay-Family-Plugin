@@ -1,0 +1,6 @@
+me\angelfire\rpfamily\Profile.class
+me\angelfire\rpfamily\RpFamily.class
+me\angelfire\rpfamily\json\GsonSerializable.class
+me\angelfire\rpfamily\commands\Rpf.class
+me\angelfire\rpfamily\json\ProfileSerializationManager.class
+me\angelfire\rpfamily\utils\FileUtils.class
