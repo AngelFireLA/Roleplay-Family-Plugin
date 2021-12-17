@@ -1,0 +1,9 @@
+name: RoleplayFamily
+version: '${project.version}'
+main: me.angelfire.rpfamily.RpFamily
+api-version: 1.17
+prefix: Plugin Started
+authors: [ AngelFire ]
+description: Helps tracking who is who in the roleplay
+commands:
+ rpfamily:
