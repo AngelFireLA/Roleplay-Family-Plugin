@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 public class Profile {
 	
-	
+	private String girlOrBoy;
 	private String playernameString;
 	private Set<String> mother;
 	private Set<String> father;
@@ -18,9 +18,10 @@ public class Profile {
 	private Set<String> sister;
 	
 	
-	public Profile(String playernameString, Set<String> mother, Set<String> father, Set<String> son,
+	public Profile(String playernameString, String girlOrBoy, Set<String> mother, Set<String> father, Set<String> son,
 			Set<String> daughter, Set<String> brother, Set<String> sister) {
 		super();
+		this.girlOrBoy = girlOrBoy;
 		this.playernameString = playernameString;
 		this.mother = mother;
 		this.father = father;
@@ -33,7 +34,10 @@ public class Profile {
 
 	
 
-
+	public String getGirlOrBoy() {
+		return girlOrBoy;
+	}
+	
 	public String getPlayernameString() {
 		return playernameString;
 	}
@@ -68,7 +72,7 @@ public class Profile {
 		return sister;
 	}
 	
-	public static Profile createProfile(String empty, String playername, String mother1, String father1, String son1, String daughter1, String brother1, String sister1) {
+	public static Profile createProfile(String playername, String girlOrBoy, String mother1, String father1, String son1, String daughter1, String brother1, String sister1) {
 		
 		final Set<String> mother = new HashSet<>();
 		mother.add(mother1);
@@ -90,7 +94,7 @@ public class Profile {
 		
 		
 
-		return new Profile(playername, mother, father, son, daughter, brother, sister);
+		return new Profile(playername, girlOrBoy, mother, father, son, daughter, brother, sister);
 		
 		
 	}
