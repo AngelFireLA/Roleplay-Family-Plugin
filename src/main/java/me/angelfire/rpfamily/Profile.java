@@ -16,10 +16,27 @@ public class Profile {
 	private Set<String> daughter;
 	private Set<String> brother;
 	private Set<String> sister;
+	private Set<String> husband;
+	private int age;
+
+
+
+
+
+
+
+
+
+	public void setDeadoralive(String deadoralive) {
+		this.deadoralive = deadoralive;
+	}
+
+	private Set<String> wife;
+	private String deadoralive;
 	
 	
 	public Profile(String playernameString, String girlOrBoy, Set<String> mother, Set<String> father, Set<String> son,
-			Set<String> daughter, Set<String> brother, Set<String> sister) {
+			Set<String> daughter, Set<String> brother, Set<String> sister, Set<String> husband, Set<String> wife, String deadoralive, Integer age) {
 		super();
 		this.girlOrBoy = girlOrBoy;
 		this.playernameString = playernameString;
@@ -29,10 +46,25 @@ public class Profile {
 		this.daughter = daughter;
 		this.brother = brother;
 		this.sister = sister;
+		this.husband = husband;
+		this.wife = wife;
+		this.deadoralive = deadoralive;
+		this.age = age;
+
 	}
 
 
 	
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 
 	public String getGirlOrBoy() {
 		return girlOrBoy;
@@ -72,7 +104,34 @@ public class Profile {
 		return sister;
 	}
 	
-	public static Profile createProfile(String playername, String girlOrBoy, String mother1, String father1, String son1, String daughter1, String brother1, String sister1) {
+	public void setHusband(Set<String> husband) {
+		this.husband = husband;
+	}
+
+
+
+
+	public Set<String> getWife() {
+		return wife;
+	}
+
+
+
+
+	public void setWife(Set<String> wife) {
+		this.wife = wife;
+	}
+
+
+	public String getDeadoralive() {
+		return deadoralive;
+	}
+	
+	public Set<String> getHusband() {
+		return husband;
+	}
+	
+	public static Profile createProfile(String playername, String girlOrBoy, String mother1, String father1, String son1, String daughter1, String brother1, String sister1, String husband1, String wife1, String deadoralive1, Integer age) {
 		
 		final Set<String> mother = new HashSet<>();
 		mother.add(mother1);
@@ -92,9 +151,16 @@ public class Profile {
 		final Set<String> sister = new HashSet<>();
 		sister.add(sister1);
 		
+		final Set<String> husband = new HashSet<>();
+		husband.add(husband1);
+		
+		final Set<String> wife = new HashSet<>();
+		wife.add(wife1);
+		
+		
 		
 
-		return new Profile(playername, girlOrBoy, mother, father, son, daughter, brother, sister);
+		return new Profile(playername, girlOrBoy, mother, father, son, daughter, brother, sister, husband, wife, deadoralive1, age);
 		
 		
 	}
